@@ -554,7 +554,7 @@ ul {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
-  border-radius: 35px;
+  border-radius: 10px;
 }
 .readon2.transparent {
   border: 1px solid #fdc800;
@@ -3908,7 +3908,7 @@ ul {
   color: #ffffff;
   display: block;
   padding: 11px 17px;
-  border-radius: 0;
+  border-radius: 0px;
   text-align: center;
 }
 .sidebar-area .newsletter .box-newsletter .btn:hover {
