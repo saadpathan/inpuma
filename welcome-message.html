@@ -179,73 +179,103 @@
 		}
 	</style>
 
+	<!--CSS REDESIGN STARTS FROM HERE-->
 	<style>
-		/* General Reset */
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		}
 
-		body {
-			background-color: #f5f5f5;
-			color: #333;
+		.greet-container {
+			background: #f0f0f0;
+			padding: 20px;
+			/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+			border-radius: 0px;
+		}
+
+		.greet-header {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.greet-header img {
+			width: 35%;
+			height: 35%;
+			border-radius: 4%;
+			object-fit: cover;
+		}
+
+		.quote {
+			font-size: 28.50px;
+			font-weight: 600;
+			line-height: 1.4;
+			color: #192f59;
+			background: #ffffff;
+			padding: 10px;
+			border-left: 5px solid #fdc800;
+		}
+
+		.greet-content {
+			margin-top: 20px;
+		}
+
+		h2 {
+			color: #192f59;
+			font-size: 25px;
+		}
+
+		p {
 			line-height: 1.6;
-		}
-
-		/* Message Card */
-		.message-card {
-			background: rgba(255, 255, 255, 0.95);
-			max-width: 100%;
-			margin: 2rem auto;
-			padding: 2rem;
-			border-radius: 10px;
-			box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-			text-align: justify;
-			/* animation: fadeInUp 1s ease-out; */
-		}
-
-		.message-text {
-			font-size: 1.1rem;
 			color: #555;
 		}
 
-		/* Signature Section */
-		.signature-container {
-			text-align: center;
-		}
-
-		.signature-container img {
-			width: 200px;
-		}
-
-		.signature-container .director-name {
-			font-size: 1.2rem;
-			font-weight: 600;
+		.greet-footer {
+			margin-top: 20px;
+			font-style: italic;
 			color: #333;
 		}
 
-		.signature-container .director-name span {
-			display: block;
-			font-size: 1rem;
-			font-weight: 400;
-			color: #666;
-		}
-
-		/* Animations */
-		@keyframes fadeInUp {
-			from {
-				opacity: 0;
-				transform: translateY(30px);
+		@media (max-width: 768px) {
+			.container {
+				width: 90%;
+				padding: 15px;
 			}
 
-			to {
-				opacity: 1;
-				transform: translateY(0);
+			.header {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.header img {
+				width: 100px;
+				height: 100px;
+			}
+
+			.quote {
+				font-size: 16px;
+				padding: 8px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.quote {
+				font-size: 14px;
+				padding: 6px;
+			}
+
+			h2 {
+				font-size: 20px;
+			}
+
+			p {
+				font-size: 14px;
 			}
 		}
 	</style>
+	<!--CSS REDESIGN ENDS AT HERE-->
+
 </head>
 
 <body class="home2">
@@ -338,11 +368,16 @@
 										<li class="menu-item-has-children">
 											<a href="#">People</a>
 											<ul class="sub-menu">
-												<li><a href="https://inpuma.vercel.app/welcome-message.html" target="_blank">Welcoming Message</a></li>
-												<li><a href="https://inpuma.vercel.app/management.html" target="_top">Team</a></li>
-												<li><a href="https://inpuma.vercel.app/staff-directory.html" target="_top">Organisation</a></li>
-												<li><a href="https://inpuma.vercel.app/faculty-profile.html" target="_blank">Faculty</a></li>
-												<li><a href="https://inpuma.vercel.app/pagenotfound.html" target="_blank">Error: 404 | Page Not Found</a></li>
+												<li><a href="https://inpuma.vercel.app/welcome-message.html"
+														target="_blank">Welcoming Message</a></li>
+												<li><a href="https://inpuma.vercel.app/management.html"
+														target="_top">Team</a></li>
+												<li><a href="https://inpuma.vercel.app/staff-directory.html"
+														target="_top">Organisation</a></li>
+												<li><a href="https://inpuma.vercel.app/faculty-profile.html"
+														target="_blank">Faculty</a></li>
+												<li><a href="https://inpuma.vercel.app/pagenotfound.html"
+														target="_blank">Error: 404 | Page Not Found</a></li>
 											</ul>
 										</li>
 										<li class="menu-item-has-children">
@@ -480,103 +515,134 @@
 	<li><span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"><a href="https://www.nst.com.my/authors/dr-muhammad-danial-azman" style="color:blue; text-decoration:underline" target="_blank"><span style="color:black">Muhammad Danial Azman</span></a></span><span style="font-size:10.0pt"><span style="color:black">. Mahathir Doctrine: Avoiding conflicts in the South China Sea. </span></span><span style="font-size:10.0pt"><a href="https://www.nst.com.my/opinion/columnists/2019/05/484739/mahathir-doctrine-avoiding-conflicts-south-china-sea" style="color:blue; text-decoration:underline">News Straits Times. 2019 may 01</a></span><span style="font-size:10.0pt"></span></span></span></span></li>
 </ol> -->
 
-					<div class="message-card">
-						<p class="message-text">
-						<h1 class="page-title">Greetings from Datuk Dr. Anis Yusal Yusoff</h1>
-						<br>
-						Choosing a field of study at the postgraduate level is not a simple decision. Prospective
-						students, parents,
-						and even employers must carefully consider many factors before making a choice. A common concern
-						for
-						students and parents is whether a master's degree will lead to a job with a good salary. Some
-						prioritise a
-						degree that ensures employability, allowing graduates to secure work soon after completing their
-						studies.
-						<br><br>
-						There are many reasons why Master of Public Policy at The International Institute of Public
-						Policy and
-						Management (INPUMA) of Universiti Malaya (UM) should be your choice for your postgraduate
-						studies.
-						<br><br>
-						First, UM is the only public university in Malaysia that offers a Master's degree in Public
-						Policy (MPP).
-						Universiti Malaya is also the top university in the country and ranks 60th globally. While we
-						understand the
-						importance of finding a job and earning a good income after graduation, our focus is on
-						cultivating future
-						policy formulators with integrity and a sense of responsibility. We aim to nurture graduates
-						with strong
-						moral values who are dedicated to solving societal issues. We seek to develop public policy
-						scholars who
-						place the nation's and society's welfare above personal interests.
-						<br><br>
-						Second, our faculty comprises leading academics who possess in-depth knowledge of both theory
-						and
-						methodology of public policy, as well as experienced professionals who have spent decades
-						directly involved
-						in policy-making within various government sectors. This blend of expertise ensures that your
-						learning
-						experience at INPUMA will be truly unique.
-						<br><br>
-						In addition to classroom learning and hands-on experience, you will also benefit from
-						participation in
-						various other initiatives offered by INPUMA. Third, INPUMA is a partner to the Ministry of
-						Foreign Affairs,
-						Malaysia in running the Malaysian Technical Cooperation Programme (MTCP), which provides
-						training to senior
-						officials from developing countries as part of Malaysia's capacity-building efforts.
-						Additionally, INPUMA
-						organises various trainings and masterclasses for international participants on public policy.
-						<br><br>
-						Fourth, our activities beyond a regular classroom teaching will provide our students with
-						valuable
-						opportunities to gain experience and build international networks. For instance, recently, we
-						trained 20
-						senior government officials from the Republic of Tatarstan, Russia and Timor Leste. Beyond our
-						academic
-						focus, INPUMA is also deeply engaged with the local community. We regularly hold roundtable
-						discussions to
-						gather public opinions on public interest issues, while our experts analyse these issues and
-						prepare policy
-						briefs. Another significant initiative under INPUMA is the Center for Leadership and
-						Professional
-						Development (UM LEAD), which provides training for senior executives through its signature
-						"Purposeful and
-						Principled Leadership" programme. Recently, UM LEAD conducted courses for senior officials from
-						Moscow,
-						Russia, and the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) of the Philippines.
-						We are keenly aware of the rapid technological advancements shaping today's world. In this
-						digital
-						information age, technology drives our economy, politics, and education. The future belongs to
-						those who
-						understand this environment, innovate within it, and advocate for the underserved. These future
-						leaders will
-						be diverse, imaginative, and driven by a desire to create meaningful change. This is the kind of
-						leaders we
-						at INPUMA would like to produce. At INPUMA, the Master of Public Policy (MPP) programme equips
-						you with a
-						strong foundation in the social sciences, combined with practical applications.
-						<br><br>
-						One of the defining features of the MPP programme is its focus on real-world practice. You will
-						apply what
-						you learn immediately through capstone projects, case studies, hands-on learning experiences,
-						and optional
-						internships, delivering lasting results. The core curriculum is interdisciplinary, exposing you
-						to
-						analytical methods, conceptual frameworks, and ways of thinking that empower you to develop
-						solutions to
-						public problems with values of integrity. We want to support you in surpassing your academic
-						goals while
-						also enjoying the vibrant social life at Universiti Malaya. Please take full advantage of what
-						INPUMA has to
-						offer, and build the knowledge you need for a successful future. All the best!
-						</p>
-						<div class="signature-container">
-							<p>Warm regards,</p>
-							<p class="director-name">Datuk Dr Anis Yusal Yusoff<br><span>Executive Director</span></p>
-							<p>International Institute of Public Policy and Management (INPUMA)
-								<br>Universiti Malaya, Malaysia
+					<div class="greet-container">
+						<div class="greet-header">
+							<img src="/executive_director.jpg" alt="Executive Director">
+							<div class="quote">UM is the only public university in Malaysia that offers a Master's
+								degree in Public
+								Policy (MPP). Universiti Malaya is also the top university in the country and ranks 60th
+								globally.
+								Second, our faculty comprises leading academics who possess in-depth knowledge of both
+								theory and
+								methodology of public policy.</div>
+						</div>
+						<div class="greet-content">
+							<h2>Greetings from Datuk Dr. Anis Yusal Yusoff</h2>
+							<p>Choosing a field of study at the postgraduate level is not a simple decision. Prospective
+								students,
+								parents,
+								and even employers must carefully consider many factors before making a choice. A common
+								concern for
+								students and parents is whether a master's degree will lead to a job with a good salary.
+								Some prioritise
+								a
+								degree that ensures employability, allowing graduates to secure work soon after
+								completing their
+								studies.
+								<br><br>
+								There are many reasons why Master of Public Policy at The International Institute of
+								Public Policy and
+								Management (INPUMA) of Universiti Malaya (UM) should be your choice for your
+								postgraduate studies.
+								<br><br>
+								First, UM is the only public university in Malaysia that offers a Master's degree in
+								Public Policy
+								(MPP).
+								Universiti Malaya is also the top university in the country and ranks 60th globally.
+								While we understand
+								the
+								importance of finding a job and earning a good income after graduation, our focus is on
+								cultivating
+								future
+								policy formulators with integrity and a sense of responsibility. We aim to nurture
+								graduates with strong
+								moral values who are dedicated to solving societal issues. We seek to develop public
+								policy scholars who
+								place the nation's and society's welfare above personal interests.
+								<br><br>
+								Second, our faculty comprises leading academics who possess in-depth knowledge of both
+								theory and
+								methodology of public policy, as well as experienced professionals who have spent
+								decades directly
+								involved
+								in policy-making within various government sectors. This blend of expertise ensures that
+								your learning
+								experience at INPUMA will be truly unique.
+								<br><br>
+								In addition to classroom learning and hands-on experience, you will also benefit from
+								participation in
+								various other initiatives offered by INPUMA. Third, INPUMA is a partner to the Ministry
+								of Foreign
+								Affairs,
+								Malaysia in running the Malaysian Technical Cooperation Programme (MTCP), which provides
+								training to
+								senior
+								officials from developing countries as part of Malaysia's capacity-building efforts.
+								Additionally,
+								INPUMA
+								organises various trainings and masterclasses for international participants on public
+								policy.
+								<br><br>
+								Fourth, our activities beyond a regular classroom teaching will provide our students
+								with valuable
+								opportunities to gain experience and build international networks. For instance,
+								recently, we trained 20
+								senior government officials from the Republic of Tatarstan, Russia and Timor Leste.
+								Beyond our academic
+								focus, INPUMA is also deeply engaged with the local community. We regularly hold
+								roundtable discussions
+								to
+								gather public opinions on public interest issues, while our experts analyse these issues
+								and prepare
+								policy
+								briefs. Another significant initiative under INPUMA is the Center for Leadership and
+								Professional
+								Development (UM LEAD), which provides training for senior executives through its
+								signature "Purposeful
+								and
+								Principled Leadership" programme. Recently, UM LEAD conducted courses for senior
+								officials from Moscow,
+								Russia, and the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) of the
+								Philippines.
+								We are keenly aware of the rapid technological advancements shaping today's world. In
+								this digital
+								information age, technology drives our economy, politics, and education. The future
+								belongs to those who
+								understand this environment, innovate within it, and advocate for the underserved. These
+								future leaders
+								will
+								be diverse, imaginative, and driven by a desire to create meaningful change. This is the
+								kind of leaders
+								we
+								at INPUMA would like to produce. At INPUMA, the Master of Public Policy (MPP) programme
+								equips you with
+								a
+								strong foundation in the social sciences, combined with practical applications.
+								<br><br>
+								One of the defining features of the MPP programme is its focus on real-world practice.
+								You will apply
+								what
+								you learn immediately through capstone projects, case studies, hands-on learning
+								experiences, and
+								optional
+								internships, delivering lasting results. The core curriculum is interdisciplinary,
+								exposing you to
+								analytical methods, conceptual frameworks, and ways of thinking that empower you to
+								develop solutions to
+								public problems with values of integrity. We want to support you in surpassing your
+								academic goals while
+								also enjoying the vibrant social life at Universiti Malaya. Please take full advantage
+								of what INPUMA
+								has to
+								offer, and build the knowledge you need for a successful future. All the best!
 							</p>
+						</div>
+						<div class="greet-footer">
+							<p>Warm regards,</p>
+							<p><strong>Datuk Dr. Anis Yusal Yusoff</strong><br>
+								Executive Director<br>
+								International Institute of Public Policy and Management (INPUMA)<br>
+								Universiti Malaya, Malaysia</p>
 						</div>
 					</div>
 
