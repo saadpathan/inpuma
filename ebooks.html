@@ -178,31 +178,97 @@
 			display: none;
 		}
 	</style>
-	<script type="text/javascript">
-		function viewImg(x, fileName) {
-			x.style.backgroundImage = "url(" + fileName + ")";
-		}
-		function hideImg(x) {
-			x.style.backgroundImage = "none";
-		}
-		function changeTab(tab, x) {
-			document.getElementById("navbar1").style.backgroundColor = "white";
-			document.getElementById("navbar1").style.color = "black";
-			document.getElementById("navbar2").style.backgroundColor = "white";
-			document.getElementById("navbar2").style.color = "black";
-			x.style.backgroundColor = "#800080";
-			x.style.color = "white";
 
-			if (tab == "tab1") {
-				document.getElementById("tab2").style.display = "none";
-				document.getElementById("tab1").style.display = "inline-block";
-			}
-			else {
-				document.getElementById("tab1").style.display = "none";
-				document.getElementById("tab2").style.display = "inline-block";
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+			text-decoration: none;
+		}
+
+		.main-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+			padding: 20px;
+			max-width: 1200px;
+			width: 100%;
+		}
+
+		.card {
+			background: #f0f0f0;
+			padding: 20px;
+			border-radius: 0px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+			border: none;
+		}
+
+		.card img {
+			width: 100%;
+			height: auto;
+			border-radius: 7px;
+		}
+
+		.card h3 {
+			margin-top: 15px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.card p {
+			color: #555;
+		}
+
+		.card a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: auto;
+			background-color: #192f59;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 10px;
+			width: 80%;
+			border-radius: 7px;
+			text-align: center;
+			font-weight: 500;
+		}
+
+		.card a:hover {
+			background-color: #fdc800;
+			color: #192f59;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 1024px) {
+			.container {
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			}
 		}
-	</script>
+
+		@media (max-width: 768px) {
+			.container {
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			}
+		}
+
+		@media (max-width: 480px) {
+			.container {
+				grid-template-columns: 1fr;
+			}
+
+			.card {
+				padding: 15px;
+			}
+		}
+	</style>
+
 </head>
 
 <body class="home2">
@@ -375,12 +441,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<h1 class="page-title">MPP</h1>
+						<h1 class="page-title">EBOOKS</h1>
 						<ul>
 							<li>
 								<a class="active" href="index">Home</a>
 							</li>
-							<li>MPP</li>
+							<li>EBOOKS</li>
 						</ul>
 					</div>
 				</div>
@@ -400,177 +466,47 @@
                     </div>-->
 			<div class="col-lg-12 col-md-12 mb-pt-50">
 				<!--<div class="sec-title mb-30">
-                		    <h2>MPP</h2>      
+                		    <h2>POLICY LABS</h2>      
                     	</div>-->
-				<div class="des">
-					<style type="text/css">
-						.navbar {
-							background-color: white;
-							color: black;
-							font-family: arial;
-							outline: 1px #192f59 solid;
-							padding: 10px;
-						}
+				<!-- <div class="des">
+					<p style="text-align:center"><img alt="" height="975" src="SERVICES/Policy%20Lab.png"
+							width="1300" />
+					</p>
 
-						.navbar:hover {
-							background-color: #192f59;
-							color: white;
-							cursor: pointer;
-						}
+					<p style="text-align:center"><img alt="" height="420" src="SERVICES/02072020.PNG" width="1300" />
+					</p>
 
-						.selectionBox {
-							background-color: #192f59;
-							width: 100%;
-							height: 240px;
-							/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); */
-							transition: width 0.5s, height 0.5s, background-color 0.5s;
-							color: white;
-							text-align: left;
-							font-family: arial;
-							font-size: 20px;
-							padding: 5px;
-							display: table;
-							background-repeat: no-repeat;
-							background-position: 120% -50%;
-							background-size: 150px;
-							overflow: hidden;
-						}
+					<p style="text-align:center"><img alt="" height="462" src="SERVICES/19062020.PNG" width="1300" />
+					</p>
 
-						.selectionBox:hover {
-							background-color: rgba(253, 200, 0, 0.8);
-							width: 100%;
-							height: 240px;
-							cursor: pointer;
-						}
+					<p style="text-align:center"><img alt="" height="447" src="SERVICES/30012019.PNG" width="1300" />
+					</p>
+				</div> -->
 
-						span {
-							display: table-cell;
-							padding: 80px;
-							vertical-align: bottom;
-							font-family: arial;
-							font-size: 20px;
-
-						}
-
-						th {
-							text-align: center;
-							padding-right: 10px;
-							padding-left: 0px;
-						}
-
-						td {
-							padding-left: 0px;
-						}
-
-						a {
-							text-decoration: none;
-							color: white;
-						}
-
-						a:hover {
-							text-decoration: none;
-							color: #192f59;
-						}
-					</style>
-					<table style="height: 90%; margin-left: 30px; display: table-cell; vertical-align: bottom;">
-						<tbody>
-							<tr>
-								<td>
-									<div class="navbar" id="navbar1" onclick="changeTab('tab1',this)"
-										style="background-color:#192f59; color:white;">Checkout Our Course</div>
-								</td>
-								<td>
-									<div class="navbar" id="navbar2" onclick="changeTab('tab2',this)">Why MPP ?</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<hr style="outline-color: #192f59;" />&nbsp;
-					<div id="tab1" style="text-align:center; width: 100%;">
-						<table style="width:100%; display: inline-table;">
-							<tbody>
-								<tr style="height: 150px;">
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/books.png')"><a
-												href="courses-core-and-elective.html"><span>Courses<br />
-													Core &amp; Elective</span></a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/fee.png')"><a
-												href="program-fee.html"><span>Program<br />
-													Fee</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/requirement.png')"><a
-												href="entry-requirement.html"><span>Entry<br />
-													Requirements</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/question.png')"><a
-												href="how-to-apply.html"><span>How To<br />
-													Apply</span> </a></div>
-									</th>
-								</tr>
-							</tbody>
-						</table>
-
-						<table style="width:80%; display: inline-table;">
-							<tbody>
-								<tr style="height: 150px;">
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/scholarship.png')"><a
-												href="scholarships-available.html"><span>Scholarship<br />
-													Available</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/calendar.png')"><a
-												href="academic-calendar.html"><span>Academic<br />
-													Calendar</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/usermanual.png')"><a
-												href="essential-guide-for-students.html"><span>Essential Guide<br />
-													For Students</span> </a></div>
-									</th>
-								</tr>
-							</tbody>
-						</table>
+				<div class="main-container">
+					<div class="card">
+						<img src="/book-cover-2.jpg" alt="Book Cover">
+						<h3>Remaking America: Democracy and Public Policy in an Age of Inequality</h3>
+						<p>Joe Soss</p>
+						<a href="book1.pdf" download>Download</a>
 					</div>
-
-					<div id="tab2" style="text-align:center; width: 100%; display: none;">
-						<table style="width:70%; display: inline-table;">
-							<tbody>
-								<tr style="height: 180px;">
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/manstanding.png')"><a
-												href="#"><span>Our<br />
-													Activities</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/globe.png')"><a href="#"><span>Our
-													Students<br />
-													Going<br />
-													Places</span> </a></div>
-									</th>
-									<th>
-										<div class="selectionBox" onmouseout="hideImg(this)"
-											onmouseover="viewImg(this,'icons/mortarboard.png')"><a
-												href="#"><span>Our<br />
-													Alumni</span> </a></div>
-									</th>
-								</tr>
-							</tbody>
-						</table>
+					<div class="card">
+						<img src="/book-cover-2.jpg" alt="Book Cover">
+						<h3>Policy Paradox: The Art of Political Decision Making</h3>
+						<p>Deborah Stone</p>
+						<a href="book2.pdf" download>Download</a>
+					</div>
+					<div class="card">
+						<img src="/book-cover-2.jpg" alt="Book Cover">
+						<h3>Why Nations Fail: The Origins of Power, Prosperity, and Poverty</h3>
+						<p>Daron Acemoglu</p>
+						<a href="book3.pdf" download>Download</a>
+					</div>
+					<div class="card">
+						<img src="/book-cover-2.jpg" alt="Book Cover">
+						<h3>Agendas, alternatives, and public policies</h3>
+						<p>John W. Kingdon</p>
+						<a href="book4.pdf" download>Download</a>
 					</div>
 				</div>
 
@@ -582,7 +518,7 @@
 
 
 	<!-- Products Start -->
-	<p align="center" style="font-size: 14px;">Last Update: 22/10/2024</p>
+	<p align="center" style="font-size: 14px;">Last Update: 22/09/2023</p>
 	<!-- Footer Start -->
 	<footer id="rs-footer" class="bg3 rs-footer">
 
